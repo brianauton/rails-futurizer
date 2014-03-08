@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.license = "MIT"
   s.files = Dir.glob("lib/**/*") + ["README.md", "History.md", "License.txt"]
   s.require_path = "lib"
-  s.add_development_dependency "rspec", "~> 3.0.0.beta2"
+  s.add_development_dependency "bundler", "~> 1"
   s.add_development_dependency "rake", "~> 0"
+  s.add_development_dependency "rspec", "~> 3.0.0.beta2"
 end
