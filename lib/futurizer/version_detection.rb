@@ -7,7 +7,8 @@ module Futurizer
     end
 
     def self.resource_detected?(resource, specifiers)
-      SystemInfo.version_requirement(specifiers).satisfied_by? current_version(resource)
+      version = current_version(resource)
+      version && SystemInfo.version_requirement(specifiers).satisfied_by?(version)
     end
 
     def self.current_version(resource)

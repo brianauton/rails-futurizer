@@ -5,7 +5,7 @@ module Futurizer
     end
 
     def self.gem_version(gem_name)
-      Gem.loaded_specs[gem_name.to_s].version
+      return Gem.loaded_specs[gem_name.to_s].version if Gem.loaded_specs[gem_name.to_s]
     end
 
     def self.ruby_version
