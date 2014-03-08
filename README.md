@@ -7,9 +7,13 @@ Drag your legacy Rails apps into the future a little less painfully.
 
 ### Requirements
 
-  * None, although it won't do anything unless it's installed
-    alongside a version of Rails for which the gem contains some
-    applicable fixes.
+  * Ruby 1.8.7 or greater
+
+  * RubyGems v1.1.0 or greater
+
+  * Nothing else, although rails-futurizer won't do anything unless
+    it's installed alongside a version of Rails for which some
+    applicable fixes are available.
 
 ### Getting Started
 
