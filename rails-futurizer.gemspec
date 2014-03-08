@@ -1,8 +1,8 @@
-require File.expand_path("../lib/rails-futurizer/version", __FILE__)
+require File.expand_path("../lib/futurizer/version", __FILE__)
 
 Gem::Specification.new do |s|
   s.name = "rails-futurizer"
-  s.version = RailsFuturizer::VERSION
+  s.version = Futurizer::VERSION
   s.platform = Gem::Platform::RUBY
   s.authors = ["Brian Auton"]
   s.email = ["brianauton@gmail.com"]
