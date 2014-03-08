@@ -27,4 +27,8 @@ Ruby, etc. will be ignored.
 
 ### Fixes Included
 
-None yet.
+  * When using Rails 2.3 or older with Ruby 2.0 or newer,
+    ActionController's filter_parameters behavior will silently fail
+    and output all parameters to the log regardless of filtering
+    options selected. Rails-futurizer will automatically patch this
+    bug if you're using Rails 2.2.1 or newer.
