@@ -54,13 +54,13 @@ That's it! Rails-futurizer will automatically activate any fixes and
 warnings that are applicable to the currently installed versions of
 Ruby and Rails, and ignore those that are not applicable.
 
-(If your app is too old to be using Bundler, you should seriously
-consider adding Bundler as the first step toward upgrading.)
+(If your app is too old to be using Bundler, consider adding Bundler
+as the first step toward upgrading.)
 
 ### Bugs Patched
 
   * When Rails 2.3 or older is used with Ruby 2.0 or newer, parameter
-    filtering in ActionController silently fails, outputting all
-    parameters to the log regardless of filter
+    log filtering in ActionController silently fails, causing all
+    parameters to be logged regardless of filter
     settings. Rails-futurizer will automatically patch this bug for
     Rails 2.2.1 or newer.
