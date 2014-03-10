@@ -10,7 +10,7 @@ Drag your legacy Rails apps into the future a little more easily.
 Upgrading a legacy Rails app can be a frustrating process. Ideally,
 you'd like to break the upgrade up into as many discrete steps as
 possible: upgrade the Ruby version here, a couple gems there, and
-check the code into master with all tests passing at each step.
+continually commit to master with all tests passing at each step.
 
 But these intermediate steps often involve version combinations that
 are not well supported or tested (e.g. Ruby 2 + Rails 2), and a lot of
@@ -35,19 +35,27 @@ them against old versions.
 
   * RubyGems 1.1.0 or greater
 
-  * Nothing else, although rails-futurizer won't do anything unless
+  * Nothing else. But rails-futurizer won't do anything unless
     it's installed alongside a version of Rails for which some
     applicable fixes are available.
 
 ### Installation
 
-Install the rails-futurizer gem alongside rspec in your Gemfile.
+If your app is using Bundler, add the rails-futurizer gem to the
+Gemfile.
 
     gem "rails-futurizer"
+
+Then update your bundle.
+
+    $ bundle
 
 That's it! Rails-futurizer will automatically activate any fixes and
 warnings that are applicable to the currently installed versions of
 Ruby and Rails, and ignore those that are not applicable.
+
+(If your app is too old to be using Bundler, you should seriously
+consider adding Bundler as the first step toward upgrading.)
 
 ### Bugs Patched
 
