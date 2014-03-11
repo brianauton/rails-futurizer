@@ -11,5 +11,9 @@ module Futurizer
     def self.ruby_version
       Gem.ruby_version
     end
+
+    def self.rubygems_version
+      Gem::Version.new Gem::VERSION
+    end
   end
 end

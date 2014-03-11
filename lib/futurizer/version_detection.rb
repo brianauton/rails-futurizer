@@ -12,7 +12,13 @@ module Futurizer
     end
 
     def self.current_version(resource)
-      resource == :ruby ? SystemInfo.ruby_version : SystemInfo.gem_version(resource)
+      if resource == :ruby
+        SystemInfo.ruby_version
+      elsif resource == :rubygems
+        SystemInfo.rubygems_version
+      else
+        SystemInfo.gem_version resource
+      end
     end
   end
 end
