@@ -7,6 +7,7 @@ module Futurizer
 
   def self.apply_patches
     require "futurizer/patches/actionpack/filter_parameters.rb"
+    require "futurizer/patches/activerecord/association_proxy.rb"
   end
 
   def self.require_dependency file

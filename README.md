@@ -59,8 +59,15 @@ as the first step toward upgrading.)
 
 ### Bugs Patched
 
+  The following bugs will be automatically patched when
+  rails-futurizer is loaded.
+
   * When Rails 2.3 or older is used with Ruby 2.0 or newer, parameter
     log filtering in ActionController silently fails, causing all
     parameters to be logged regardless of filter
-    settings. Rails-futurizer will automatically patch this bug for
-    Rails 2.2.1 or newer.
+    settings. Patched for Rails 2.2.1 or newer.
+
+  * When Rails 2.2 - 3.0 is used with Ruby 2.0 or newer, saving an
+    ActiveRecord model that has an array assigned to one of its
+    has_many associations will raise the exception "undefined method
+    'insert_record' for Array". Patched for all affected versions.
